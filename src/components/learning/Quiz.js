@@ -187,6 +187,13 @@ const Quiz = ({ topic, onComplete }) => {
     setAnswered(false);
   };
 
+  const closeQuiz = () => {
+    resetQuiz();
+    if (onComplete) {
+      onComplete(score);
+    }
+  };
+
   if (showResult) {
     const percentage = Math.round((score / questions.length) * 100);
     const passed = percentage >= 50;
@@ -212,11 +219,11 @@ const Quiz = ({ topic, onComplete }) => {
               : "Keep learning! Review the topic and try again. 💪"}
           </p>
           <div className="result-actions">
-            <button className="btn-retry" onClick={resetQuiz}>
-              🔄 Try Again
+            <button className="btn-continue" onClick={closeQuiz}>
+              ← Back to Learn
             </button>
-            <button className="btn-continue" onClick={() => onComplete && onComplete(score)}>
-              Continue Learning →
+            <button className="btn-retry" onClick={resetQuiz}>
+              More Questions 🔄
             </button>
           </div>
         </div>

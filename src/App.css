@@ -1,6 +1,6 @@
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+  background: linear-gradient(135deg, #FF8C00 0%, #FFA500 50%, #FFB84D 100%);
 }
 
 .learning-dashboard {
@@ -75,4 +75,65 @@
 .next-topic-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(16, 185, 129, 0.4);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .learning-dashboard {
+    padding: 10px;
+  }
+
+  .app-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .logo-title {
+    flex-direction: column !important;
+    gap: 10px !important;
+    text-align: center;
+  }
+
+  .logo-title img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .user-info {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .user-info button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .next-topic-button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Tablet Responsive Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .app-header {
+    padding: 18px;
+  }
+
+  .app-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .user-info {
+    gap: 12px;
+  }
 }

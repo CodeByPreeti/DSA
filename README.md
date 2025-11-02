@@ -1,36 +1,121 @@
-# 🚀 Interactive DSA Storytelling Platform# Getting Started with Create React App
+# DSA Storyteller# 🚀 Interactive DSA Storytelling Platform
 
 
 
-[![React](https://img.shields.io/badge/React-19.2.0-blue.svg)](https://reactjs.org/)This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)## Available Scripts
+An interactive Data Structures & Algorithms learning platform that transforms complex concepts into engaging stories with AI-powered narration and visualization.---
 
 
 
-> An immersive, interactive platform for learning Data Structures and Algorithms through storytelling, visualizations, and voice-powered features.In the project directory, you can run:
+## 🚀 Features## 🎉 **LATEST UPDATE: Gradio API Fixed!**
 
 
+
+- **AI-Powered Story Generation**: Generate educational stories using Groq API with Gemini and HuggingFace fallbacks**Your app now uses proper Gradio Space integration with:**
+
+- **Interactive Learning**: Visual DSA concepts with animations and diagrams- ✅ Server-Sent Events (SSE) streaming
+
+- **Smart Narration**: Text-to-speech with word-by-word highlighting- ✅ HuggingFace token support (optional)
+
+- **Customizable Experience**: 8 font choices for personalized reading- ✅ Multiple AI model fallbacks
+
+- **Progress Tracking**: Quiz system to test understanding- ✅ Enhanced console logging
+
+- **Mobile Responsive**: Seamless experience across all devices- ✅ Faster animations
+
+
+
+## 🛠️ Tech Stack**📚 New Documentation:**
+
+- 📖 **[COMPLETE_SETUP.md](./COMPLETE_SETUP.md)** - Start here!
+
+- **Frontend**: React 19.2.0- 🔑 **[HUGGINGFACE_TOKEN_GUIDE.md](./HUGGINGFACE_TOKEN_GUIDE.md)** - Get better AI stories (2 min setup)
+
+- **Routing**: React Router v6- ⚡ **[QUICK_FIX_GUIDE.md](./QUICK_FIX_GUIDE.md)** - Quick reference
+
+- **AI Services**: Groq API, Google Gemini, HuggingFace- 🔧 **[API_FIX_SUMMARY.md](./API_FIX_SUMMARY.md)** - Technical details
+
+- **Speech**: Web Speech API
+
+- **Styling**: Custom CSS with animations**🚀 Quick Setup:**
+
+1. App is running at http://localhost:3000
+
+## 📦 Installation2. Click "New" button to generate stories
+
+3. **Optional**: Add HuggingFace token for better AI ([Guide](./HUGGINGFACE_TOKEN_GUIDE.md))
+
+```bash
+
+# Install dependencies---
+
+npm install
+
+# Getting Started with Create React App
+
+# Start development server
+
+npm start
+
+
+
+# Build for production[![React](https://img.shields.io/badge/React-19.2.0-blue.svg)](https://reactjs.org/)This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+npm run build
+
+```[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+
+
+## 🌐 Deployment[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)## Available Scripts
+
+
+
+This app is ready for Railway deployment:
+
+
+
+1. Push to GitHub repository> An immersive, interactive platform for learning Data Structures and Algorithms through storytelling, visualizations, and voice-powered features.In the project directory, you can run:
+
+2. Connect Railway to your GitHub repo
+
+3. Railway will auto-detect React and deploy
+
+4. Set environment variables if needed
 
 ## 📋 Table of Contents### `npm start`
 
+## 👥 Team
 
+
+
+**MBM University - 7th Semester - Minor Project 2025**
 
 - [Features](#-features)Runs the app in the development mode.\
 
-- [Tech Stack](#-tech-stack)Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Poonam - Developer
 
-- [Prerequisites](#-prerequisites)
+- Preeti - Developer- [Tech Stack](#-tech-stack)Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- [Installation](#-installation)The page will reload when you make changes.\
+- Rohit - Developer
 
-  - [Windows](#windows)You may also see any lint errors in the console.
+- Tamannah - Developer- [Prerequisites](#-prerequisites)
 
-  - [macOS](#macos)
 
-  - [Linux](#linux)### `npm test`
+
+## 📄 License- [Installation](#-installation)The page will reload when you make changes.\
+
+
+
+MIT License - Educational Project  - [Windows](#windows)You may also see any lint errors in the console.
+
+
+
+---  - [macOS](#macos)
+
+
+
+Built with ❤️ by Team poopreetrohitamannah  - [Linux](#linux)### `npm test`
+
 
 - [Running the Application](#-running-the-application)
 

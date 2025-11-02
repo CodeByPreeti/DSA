@@ -3,11 +3,92 @@
   margin: 0 auto;
   padding: 0 20px;
   animation: fadeIn 0.5s ease;
+  position: relative;
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Milestone Overlay */
+.milestone-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+.milestone-card {
+  background: linear-gradient(135deg, #8B5CF6, #7C3AED, #10B981);
+  padding: 60px 80px;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  animation: celebration-pop 0.5s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.milestone-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  animation: rotate-gradient 3s linear infinite;
+}
+
+.milestone-icon-large {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  animation: bounce-celebration 1s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.milestone-card h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.milestone-card p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.2rem;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes celebration-pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce-celebration {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.1); }
+}
+
+@keyframes rotate-gradient {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Split View Container */
@@ -142,6 +223,32 @@
   z-index: 1;
 }
 
+/* Font Selector Styling */
+.font-selector {
+  padding: 12px 16px;
+  border: 2px solid #8B5CF6;
+  border-radius: 15px;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: #374151;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.font-selector:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.2);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(124, 58, 237, 0.1));
+}
+
+.font-selector:focus {
+  border-color: #7C3AED;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
 .btn-icon {
   display: flex;
   align-items: center;
@@ -210,6 +317,24 @@
   background: linear-gradient(135deg, #EF4444, #DC2626);
   color: white;
   animation: recordingPulse 1s infinite;
+}
+
+.btn-icon.narrating {
+  background: linear-gradient(135deg, #10B981, #059669);
+  color: white;
+  animation: narratingGlow 1.5s infinite;
+  border-color: #10B981;
+}
+
+@keyframes narratingGlow {
+  0%, 100% { 
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    transform: translateY(-3px);
+  }
+  50% { 
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.7);
+    transform: translateY(-5px);
+  }
 }
 
 @keyframes recordingPulse {
@@ -515,6 +640,31 @@
 
 .story-paragraph:last-child {
   margin-bottom: 0;
+}
+
+/* Highlighted word during narration */
+.highlighted-word {
+  background-color: #FFD700 !important;
+  color: #1F2937;
+  padding: 3px 6px !important;
+  border-radius: 5px !important;
+  font-weight: 800 !important;
+  animation: wordHighlight 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.5);
+}
+
+@keyframes wordHighlight {
+  0% { 
+    background-color: transparent;
+    transform: scale(1);
+  }
+  50% { 
+    transform: scale(1.1);
+  }
+  100% { 
+    background-color: #FFD700;
+    transform: scale(1);
+  }
 }
 
 .info-note {

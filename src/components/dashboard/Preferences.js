@@ -32,6 +32,9 @@ const Preferences = ({ onPreferencesSubmit }) => {
   return (
     <div className="preferences-container">
       <div className="preferences-card">
+        <div className="preferences-logo">
+          <img src="/ok.png" alt="DSA Logo" className="preferences-logo-img" />
+        </div>
         <h2 className="preferences-title">Customize Your Learning Journey</h2>
         <p className="preferences-subtitle">Tell us how you want to learn DSA</p>
         

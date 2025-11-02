@@ -12,11 +12,11 @@ const DSAVisualizer = ({ topic, isPlaying, onStepComplete }) => {
   const visualizations = {
     arrays: {
       steps: [
-        { state: [5, 2, 8, 1, 9], highlight: [], explanation: 'Initial array with 5 elements' },
-        { state: [5, 2, 8, 1, 9], highlight: [0], explanation: 'Accessing element at index 0: value = 5' },
-        { state: [5, 2, 8, 1, 9], highlight: [2], explanation: 'Accessing element at index 2: value = 8' },
-        { state: [5, 2, 8, 1, 9, 3], highlight: [5], explanation: 'Inserting element 3 at the end' },
-        { state: [5, 2, 8, 1, 9], highlight: [], explanation: 'Array after deletion (removed last element)' },
+        { state: [5, 2, 8, 1, 9], highlight: [], explanation: '📦 Initial array with 5 elements' },
+        { state: [5, 2, 8, 1, 9], highlight: [0], explanation: '👉 Accessing index 0: value = 5 (O(1))' },
+        { state: [5, 2, 8, 1, 9], highlight: [2], explanation: '🔍 Accessing index 2: value = 8 (O(1))' },
+        { state: [5, 2, 8, 1, 9, 3], highlight: [5], explanation: '➕ Push element 3 at end (O(1))' },
+        { state: [5, 2, 8, 1, 9], highlight: [], explanation: '✅ Array operations complete!' },
       ],
       code: `// Array Operations
 let arr = [5, 2, 8, 1, 9];
@@ -235,7 +235,7 @@ factorial(5)
     if (isPlaying && !isAnimating) {
       const timer = setTimeout(() => {
         nextStep();
-      }, 2000);
+      }, 1800); // Faster - 1.8 seconds per step
       return () => clearTimeout(timer);
     }
   }, [isPlaying, currentStep, isAnimating]);
@@ -274,16 +274,32 @@ factorial(5)
     
     if (topic === 'arrays' || topic === 'stacks' || topic === 'queues' || topic === 'sorting' || topic === 'recursion') {
       return (
-        <div className="array-visualization">
+        <div className={`array-visualization ${topic}-theme`}>
           {Array.isArray(visualState) && visualState.map((value, index) => (
             <div
-              key={index}
-              className={`array-element ${step.highlight?.includes(index) ? 'highlighted' : ''} ${isAnimating ? 'animating' : ''}`}
+              key={`${index}-${value}`}
+              className={`array-element ${step.highlight?.includes(index) ? 'highlighted pulse-animation' : ''} ${isAnimating ? 'animating slide-in' : ''}`}
+              style={{
+                animationDelay: `${index * 0.1}s`,
+              }}
             >
               <div className="element-value">{value}</div>
-              <div className="element-index">{index}</div>
+              {step.highlight?.includes(index) && (
+                <div className="highlight-indicator">
+                  <span className="glow-ring"></span>
+                  <span className="active-marker">🔍</span>
+                </div>
+              )}
+              <div className="element-index">Index: {index}</div>
             </div>
           ))}
+          {isAnimating && (
+            <div className="animation-overlay">
+              <div className="sparkle-effect">
+                <span>✨</span><span>⭐</span><span>💫</span>
+              </div>
+            </div>
+          )}
         </div>
       );
     }
@@ -292,12 +308,35 @@ factorial(5)
       return (
         <div className="linked-list-visualization">
           {Array.isArray(visualState) && visualState.map((node, index) => (
-            <div key={index} className="node-container">
-              <div className={`linked-node ${step.highlight?.includes(index) ? 'highlighted' : ''}`}>
-                <div className="node-value">{node.val}</div>
-                <div className="node-next">{node.next !== null ? '→' : '∅'}</div>
+            <div key={index} className="node-container" style={{ animationDelay: `${index * 0.15}s` }}>
+              <div className={`linked-node ${step.highlight?.includes(index) ? 'highlighted bounce-in' : ''} ${isAnimating ? 'fade-in' : ''}`}>
+                <div className="node-data-section">
+                  <span className="data-label">Data</span>
+                  <div className="node-value">{node.val}</div>
+                </div>
+                <div className="node-pointer-section">
+                  <span className="pointer-label">Next</span>
+                  <div className="node-next">{node.next !== null ? '→' : '∅'}</div>
+                </div>
+                {step.highlight?.includes(index) && (
+                  <div className="node-indicator">
+                    <span className="indicator-arrow">👉</span>
+                    <span className="indicator-text">Active</span>
+                  </div>
+                )}
               </div>
-              {node.next !== null && <div className="arrow">→</div>}
+              {node.next !== null && (
+                <div className="arrow-connector">
+                  <svg width="40" height="20" viewBox="0 0 40 20">
+                    <defs>
+                      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#8B5CF6" />
+                      </marker>
+                    </defs>
+                    <line x1="0" y1="10" x2="35" y2="10" stroke="#8B5CF6" strokeWidth="2" markerEnd="url(#arrowhead)" />
+                  </svg>
+                </div>
+              )}
             </div>
           ))}
         </div>

@@ -18,20 +18,55 @@ const StoryViewer = ({ userPreferences, currentTopic }) => {
   const [showQuiz, setShowQuiz] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [audioVolume, setAudioVolume] = useState(0.3);
+  const [selectedFont, setSelectedFont] = useState('Georgia');
+  const [currentWordIndex, setCurrentWordIndex] = useState(-1);
+  const [isNarrating, setIsNarrating] = useState(false);
 
   const generateStory = useCallback(async () => {
     if (!userPreferences || !currentTopic) return;
 
+    // Force clear everything first
+    setStory('');
     setIsLoading(true);
     setError('');
+    setShowQuiz(false);
+    
+    // Add a small delay to ensure UI updates
+    await new Promise(resolve => setTimeout(resolve, 100));
     
     try {
-      const prompt = huggingFaceService.createPrompt(userPreferences, currentTopic);
-      const generatedStory = await huggingFaceService.generateStory(prompt, userPreferences, currentTopic);
-      setStory(generatedStory);
+      const timestamp = Date.now();
+      const randomSeed = Math.random();
+      console.log('🚀 Generating NEW AI-powered story for:', currentTopic);
+      console.log('⏰ Timestamp:', timestamp);
+      console.log('🎲 Random Seed:', randomSeed);
+      console.log('📋 Preferences:', userPreferences);
+      console.log('🤖 Using Groq/Gemini/HuggingFace AI...');
+      
+      const result = await huggingFaceService.generateStory(currentTopic, {
+        ...userPreferences,
+        timestamp,
+        randomSeed,
+        forceNew: true
+      });
+      
+      console.log('📦 AI Story generation result:', result);
+      
+      // Extract story text from result
+      const storyText = typeof result === 'string' ? result : (result.story || result);
+      
+      if (storyText && storyText.length > 50) {
+        setStory(storyText);
+        console.log('✅ AI Story generated successfully! Length:', storyText.length);
+        console.log('📝 First 100 chars:', storyText.substring(0, 100));
+      } else {
+        throw new Error('Story too short or empty');
+      }
     } catch (err) {
-      console.error('Story generation error:', err);
-      setStory(getFallbackStory());
+      console.error('❌ AI Story generation error:', err);
+      const fallbackStory = getFallbackStory();
+      setStory(fallbackStory);
+      setError('Using educational content. AI services may be loading...');
     } finally {
       setIsLoading(false);
     }
@@ -225,6 +260,46 @@ You compute factorial(5): 5 * factorial(4) → 4 * factorial(3) → ... → base
     audioService.setVolume(newVolume);
   };
 
+  const handleNarrate = () => {
+    if (isNarrating) {
+      // Stop narration
+      window.speechSynthesis.cancel();
+      setIsNarrating(false);
+      setCurrentWordIndex(-1);
+      return;
+    }
+
+    if (!story) return;
+
+    setIsNarrating(true);
+    const words = story.replace(/\n\n/g, ' ').split(' ');
+    let wordIndex = 0;
+
+    const utterance = new SpeechSynthesisUtterance(story);
+    utterance.rate = 0.9; // Slightly slower for better sync
+    utterance.pitch = 1;
+    utterance.volume = audioVolume;
+
+    utterance.onboundary = (event) => {
+      if (event.name === 'word') {
+        setCurrentWordIndex(wordIndex);
+        wordIndex++;
+      }
+    };
+
+    utterance.onend = () => {
+      setIsNarrating(false);
+      setCurrentWordIndex(-1);
+    };
+
+    utterance.onerror = () => {
+      setIsNarrating(false);
+      setCurrentWordIndex(-1);
+    };
+
+    window.speechSynthesis.speak(utterance);
+  };
+
   useEffect(() => {
     generateStory();
   }, [generateStory]);
@@ -242,7 +317,6 @@ You compute factorial(5): 5 * factorial(4) → 4 * factorial(3) → ... → base
         <div className="topic-info">
           <div className="topic-badge-wrapper">
             <div className="topic-badge">{formatTopicName(currentTopic)}</div>
-            <div className="topic-icon">🚀</div>
           </div>
           <h1>Your {userPreferences.theme} Learning Adventure</h1>
           <p className="level-indicator">
@@ -252,13 +326,32 @@ You compute factorial(5): 5 * factorial(4) → 4 * factorial(3) → ... → base
         </div>
         
         <div className="action-buttons">
-          <button 
-            className={`btn-icon ${isListening ? 'active' : ''}`}
-            onClick={toggleListenMode}
-            title="Listen to Story"
+          {/* Font Selector */}
+          <select 
+            className="font-selector"
+            value={selectedFont}
+            onChange={(e) => setSelectedFont(e.target.value)}
+            title="Choose Font"
           >
-            <span className="icon">{isListening ? '🔊' : '🎧'}</span>
-            <span className="btn-text">{isListening ? 'Speaking...' : 'Listen'}</span>
+            <option value="Georgia">Georgia</option>
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Comic Sans MS">Comic Sans</option>
+            <option value="Palatino">Palatino</option>
+            <option value="Garamond">Garamond</option>
+          </select>
+
+          {/* Narrate Button */}
+          <button 
+            className={`btn-icon ${isNarrating ? 'narrating' : ''}`}
+            onClick={handleNarrate}
+            disabled={!story}
+            title={isNarrating ? "Stop Narration" : "Narrate Story"}
+          >
+            <span className="icon">{isNarrating ? '⏸️' : '🔊'}</span>
+            <span className="btn-text">{isNarrating ? 'Stop' : 'Narrate'}</span>
           </button>
           
           <button 
@@ -292,10 +385,10 @@ You compute factorial(5): 5 * factorial(4) → 4 * factorial(3) → ... → base
             className="btn-icon btn-regenerate"
             onClick={generateStory}
             disabled={isLoading}
-            title="Generate new story"
+            title="Generate AI-powered story"
           >
-            <span className="icon">✨</span>
-            <span className="btn-text">{isLoading ? '...' : 'New'}</span>
+            <span className="icon">{isLoading ? '⏳' : '✨'}</span>
+            <span className="btn-text">{isLoading ? 'Generating...' : 'AI Story'}</span>
           </button>
         </div>
       </div>
@@ -334,11 +427,14 @@ You compute factorial(5): 5 * factorial(4) → 4 * factorial(3) → ... → base
               <div className="spinner-advanced">
                 <div className="spinner-inner"></div>
               </div>
-              <h3>Crafting Your Story...</h3>
-              <p>Weaving magic into data structures</p>
+              <h3>🤖 Crafting Your AI Story...</h3>
+              <p>Creating an engaging {userPreferences.theme} adventure about {formatTopicName(currentTopic)}</p>
               <div className="loading-dots">
                 <span></span><span></span><span></span>
               </div>
+              <p style={{marginTop: '15px', fontSize: '0.9em', opacity: 0.7}}>
+                ✨ Powered by AI • No API key needed • Free to use
+              </p>
             </div>
           ) : (
             <div className="story-card-advanced">
@@ -353,16 +449,50 @@ You compute factorial(5): 5 * factorial(4) → 4 * factorial(3) → ... → base
                 </div>
               </div>
               
-              <div className="story-text-content">
-                {story.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="story-paragraph">{paragraph}</p>
-                ))}
+              <div className="story-text-content" style={{ fontFamily: selectedFont, fontWeight: '600', fontSize: '1.15rem', lineHeight: '1.8' }}>
+                {story ? (
+                  story.split('\n\n').map((paragraph, pIndex) => (
+                    <p key={pIndex} className="story-paragraph">
+                      {paragraph.split(' ').map((word, wIndex) => {
+                        const globalIndex = story.substring(0, story.indexOf(paragraph)).split(' ').length + wIndex;
+                        const isHighlighted = isNarrating && globalIndex === currentWordIndex;
+                        return (
+                          <span
+                            key={wIndex}
+                            className={isHighlighted ? 'highlighted-word' : ''}
+                            style={{
+                              backgroundColor: isHighlighted ? '#FFD700' : 'transparent',
+                              padding: isHighlighted ? '2px 4px' : '0',
+                              borderRadius: isHighlighted ? '4px' : '0',
+                              transition: 'all 0.2s ease',
+                              fontWeight: isHighlighted ? '800' : '600'
+                            }}
+                          >
+                            {word}{' '}
+                          </span>
+                        );
+                      })}
+                    </p>
+                  ))
+                ) : (
+                  <div style={{textAlign: 'center', padding: '40px', opacity: 0.7}}>
+                    <h3>👋 Welcome!</h3>
+                    <p>Click the "AI Story" ✨ button above to generate your personalized AI story</p>
+                  </div>
+                )}
               </div>
               
               {error && (
-                <div className="info-note">
-                  <span className="icon">💡</span>
-                  Using enhanced educational content
+                <div className="info-note" style={{
+                  background: 'linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%)',
+                  border: '2px solid #fdcb6e',
+                  borderRadius: '8px',
+                  padding: '12px',
+                  marginTop: '15px'
+                }}>
+                  <span className="icon">⚠️</span>
+                  {error} <br/>
+                  <small style={{opacity: 0.8}}>💡 The AI model may be loading. Stories are still educational and engaging!</small>
                 </div>
               )}
             </div>

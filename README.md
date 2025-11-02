@@ -1,4 +1,4 @@
-# DSA Storytelling Platform# DSA Storyteller# 🚀 Interactive DSA Storytelling Platform
+# DSA Storytelling Platform# DSA Storytelling Platform# DSA Storyteller# 🚀 Interactive DSA Storytelling Platform
 
 
 
@@ -6,7 +6,7 @@ An interactive educational web application for learning Data Structures and Algo
 
 
 
-## AbstractAn interactive Data Structures & Algorithms learning platform that transforms complex concepts into engaging stories with AI-powered narration and visualization.---
+## AbstractAn interactive educational web application for learning Data Structures and Algorithms through AI-powered narrative generation, real-time visualizations, and speech synthesis.
 
 
 
@@ -14,7 +14,7 @@ This project presents a novel approach to computer science education by combinin
 
 
 
-## Table of Contents## 🚀 Features## 🎉 **LATEST UPDATE: Gradio API Fixed!**
+## Table of Contents## AbstractAn interactive Data Structures & Algorithms learning platform that transforms complex concepts into engaging stories with AI-powered narration and visualization.---
 
 
 
@@ -22,385 +22,788 @@ This project presents a novel approach to computer science education by combinin
 
 - [System Architecture](#system-architecture)
 
-- [Technical Stack](#technical-stack)- **AI-Powered Story Generation**: Generate educational stories using Groq API with Gemini and HuggingFace fallbacks**Your app now uses proper Gradio Space integration with:**
+- [Technical Stack](#technical-stack)This project presents a novel approach to computer science education by combining storytelling methodologies with interactive visualizations and artificial intelligence. The platform transforms abstract DSA concepts into contextual narratives, enhancing student engagement and knowledge retention through multimodal learning experiences.
 
 - [Prerequisites](#prerequisites)
 
-- [Installation](#installation)- **Interactive Learning**: Visual DSA concepts with animations and diagrams- ✅ Server-Sent Events (SSE) streaming
+- [Installation](#installation)
 
 - [Configuration](#configuration)
 
-- [Usage](#usage)- **Smart Narration**: Text-to-speech with word-by-word highlighting- ✅ HuggingFace token support (optional)
+- [Usage](#usage)## Table of Contents## 🚀 Features## 🎉 **LATEST UPDATE: Gradio API Fixed!**
 
 - [Project Structure](#project-structure)
 
-- [Deployment](#deployment)- **Customizable Experience**: 8 font choices for personalized reading- ✅ Multiple AI model fallbacks
+- [Deployment](#deployment)
 
 - [Academic Context](#academic-context)
 
-- [Contributors](#contributors)- **Progress Tracking**: Quiz system to test understanding- ✅ Enhanced console logging
+- [Contributors](#contributors)- [Features](#features)
 
 - [License](#license)
 
-- **Mobile Responsive**: Seamless experience across all devices- ✅ Faster animations
+- [System Architecture](#system-architecture)
 
 ## Features
 
-
+- [Technical Stack](#technical-stack)- **AI-Powered Story Generation**: Generate educational stories using Groq API with Gemini and HuggingFace fallbacks**Your app now uses proper Gradio Space integration with:**
 
 ### Core Functionality
 
-## 🛠️ Tech Stack**📚 New Documentation:**
+- [Prerequisites](#prerequisites)
 
 1. **AI-Powered Content Generation**
 
-   - Integration with multiple AI providers (Groq, Google Gemini, HuggingFace)- 📖 **[COMPLETE_SETUP.md](./COMPLETE_SETUP.md)** - Start here!
+   - Integration with multiple AI providers (Groq, Google Gemini, HuggingFace)- [Installation](#installation)- **Interactive Learning**: Visual DSA concepts with animations and diagrams- ✅ Server-Sent Events (SSE) streaming
 
    - Automatic fallback mechanism for service reliability
 
-   - Contextual story generation based on DSA concepts- **Frontend**: React 19.2.0- 🔑 **[HUGGINGFACE_TOKEN_GUIDE.md](./HUGGINGFACE_TOKEN_GUIDE.md)** - Get better AI stories (2 min setup)
+   - Contextual story generation based on DSA concepts- [Configuration](#configuration)
 
    - Dynamic content adaptation to user skill level
 
-- **Routing**: React Router v6- ⚡ **[QUICK_FIX_GUIDE.md](./QUICK_FIX_GUIDE.md)** - Quick reference
+- [Usage](#usage)- **Smart Narration**: Text-to-speech with word-by-word highlighting- ✅ HuggingFace token support (optional)
 
 2. **Interactive Visualizations**
 
-   - Step-by-step algorithm execution display- **AI Services**: Groq API, Google Gemini, HuggingFace- 🔧 **[API_FIX_SUMMARY.md](./API_FIX_SUMMARY.md)** - Technical details
+   - Step-by-step algorithm execution display- [Project Structure](#project-structure)
 
    - Real-time data structure state representation
 
-   - Configurable animation speed and playback controls- **Speech**: Web Speech API
+   - Configurable animation speed and playback controls- [Deployment](#deployment)- **Customizable Experience**: 8 font choices for personalized reading- ✅ Multiple AI model fallbacks
 
    - Support for common DSA topics: Arrays, Linked Lists, Stacks, Queues, Trees, Graphs, Sorting Algorithms, Recursion
 
-- **Styling**: Custom CSS with animations**🚀 Quick Setup:**
+- [Academic Context](#academic-context)
 
 3. **Speech Synthesis Integration**
 
-   - Text-to-speech narration with Web Speech API1. App is running at http://localhost:3000
+   - Text-to-speech narration with Web Speech API- [Contributors](#contributors)- **Progress Tracking**: Quiz system to test understanding- ✅ Enhanced console logging
 
    - Word-by-word highlighting synchronized with audio output
 
-   - Customizable font selection (8 font families)## 📦 Installation2. Click "New" button to generate stories
+   - Customizable font selection (8 font families)- [License](#license)
 
    - Adjustable speech parameters
 
-3. **Optional**: Add HuggingFace token for better AI ([Guide](./HUGGINGFACE_TOKEN_GUIDE.md))
+- **Mobile Responsive**: Seamless experience across all devices- ✅ Faster animations
 
 4. **Assessment System**
 
-   - Multiple-choice questionnaires per topic```bash
+   - Multiple-choice questionnaires per topic## Features
 
    - Immediate feedback mechanism
 
-   - Progress tracking and score calculation# Install dependencies---
+   - Progress tracking and score calculation
 
    - Iterative learning support
 
-npm install
+### Core Functionality
 
 5. **User Interface**
 
-   - Responsive design for multiple device form factors# Getting Started with Create React App
+   - Responsive design for multiple device form factors## 🛠️ Tech Stack**📚 New Documentation:**
 
    - Modern CSS animations and transitions
 
-   - Dark mode color scheme# Start development server
+   - Orange theme color scheme1. **AI-Powered Content Generation**
 
    - Accessibility-compliant components
 
-npm start
+   - Integration with multiple AI providers (Groq, Google Gemini, HuggingFace)- 📖 **[COMPLETE_SETUP.md](./COMPLETE_SETUP.md)** - Start here!
 
 ## System Architecture
 
-
+   - Automatic fallback mechanism for service reliability
 
 ### Frontend Architecture
 
-# Build for production[![React](https://img.shields.io/badge/React-19.2.0-blue.svg)](https://reactjs.org/)This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+   - Contextual story generation based on DSA concepts- **Frontend**: React 19.2.0- 🔑 **[HUGGINGFACE_TOKEN_GUIDE.md](./HUGGINGFACE_TOKEN_GUIDE.md)** - Get better AI stories (2 min setup)
 
 ```
 
-┌─────────────────────────────────────────────────────┐npm run build
+┌─────────────────────────────────────────────────────┐   - Dynamic content adaptation to user skill level
 
 │              React Application Layer                │
 
-│  ┌──────────────┐  ┌──────────────┐  ┌───────────┐ │```[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+│  ┌──────────────┐  ┌──────────────┐  ┌───────────┐ │- **Routing**: React Router v6- ⚡ **[QUICK_FIX_GUIDE.md](./QUICK_FIX_GUIDE.md)** - Quick reference
 
 │  │   Landing    │  │     Auth     │  │   Main    │ │
 
-│  │     Page     │→ │  Component   │→ │    App    │ │
+│  │     Page     │→ │  Component   │→ │    App    │ │2. **Interactive Visualizations**
 
 │  └──────────────┘  └──────────────┘  └───────────┘ │
 
-└─────────────────────────────────────────────────────┘## 🌐 Deployment[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)## Available Scripts
+└─────────────────────────────────────────────────────┘   - Step-by-step algorithm execution display- **AI Services**: Groq API, Google Gemini, HuggingFace- 🔧 **[API_FIX_SUMMARY.md](./API_FIX_SUMMARY.md)** - Technical details
 
                           ↓
 
-┌─────────────────────────────────────────────────────┐
+┌─────────────────────────────────────────────────────┐   - Real-time data structure state representation
 
 │            Component Hierarchy                      │
 
-│  ┌────────────┐  ┌────────────┐  ┌──────────────┐  │This app is ready for Railway deployment:
+│  ┌────────────┐  ┌────────────┐  ┌──────────────┐  │   - Configurable animation speed and playback controls- **Speech**: Web Speech API
 
 │  │Preferences │  │   Story    │  │     Quiz     │  │
 
-│  │  Manager   │→ │  Viewer    │→ │   System     │  │
+│  │  Manager   │→ │  Viewer    │→ │   System     │  │   - Support for common DSA topics: Arrays, Linked Lists, Stacks, Queues, Trees, Graphs, Sorting Algorithms, Recursion
 
 │  └────────────┘  └────────────┘  └──────────────┘  │
 
-└─────────────────────────────────────────────────────┘1. Push to GitHub repository> An immersive, interactive platform for learning Data Structures and Algorithms through storytelling, visualizations, and voice-powered features.In the project directory, you can run:
+└─────────────────────────────────────────────────────┘- **Styling**: Custom CSS with animations**🚀 Quick Setup:**
 
                           ↓
 
-┌─────────────────────────────────────────────────────┐2. Connect Railway to your GitHub repo
+┌─────────────────────────────────────────────────────┐3. **Speech Synthesis Integration**
 
 │              Service Layer                          │
 
-│  ┌────────────┐  ┌────────────┐  ┌──────────────┐  │3. Railway will auto-detect React and deploy
+│  ┌────────────┐  ┌────────────┐  ┌──────────────┐  │   - Text-to-speech narration with Web Speech API1. App is running at http://localhost:3000
 
 │  │   AI Gen   │  │   Speech   │  │    Audio     │  │
 
-│  │  Service   │  │  Service   │  │   Service    │  │4. Set environment variables if needed
+│  │  Service   │  │  Service   │  │   Service    │  │   - Word-by-word highlighting synchronized with audio output
 
 │  └────────────┘  └────────────┘  └──────────────┘  │
 
-└─────────────────────────────────────────────────────┘## 📋 Table of Contents### `npm start`
+└─────────────────────────────────────────────────────┘   - Customizable font selection (8 font families)## 📦 Installation2. Click "New" button to generate stories
 
 ```
 
-## 👥 Team
+   - Adjustable speech parameters
 
 ### AI Service Integration
 
-
+3. **Optional**: Add HuggingFace token for better AI ([Guide](./HUGGINGFACE_TOKEN_GUIDE.md))
 
 The application implements a cascade pattern for AI service availability:
 
-**MBM University - 7th Semester - Minor Project 2025**
+4. **Assessment System**
 
 1. **Primary**: Groq API (Llama 3.1 model) - Optimized for speed
 
-2. **Secondary**: Google Gemini API - Balanced performance- [Features](#-features)Runs the app in the development mode.\
+2. **Secondary**: Google Gemini API - Balanced performance   - Multiple-choice questionnaires per topic```bash
 
 3. **Tertiary**: HuggingFace Inference Providers - Fallback option
 
-- Poonam - Developer
+   - Immediate feedback mechanism
 
 ## Technical Stack
 
-- Preeti - Developer- [Tech Stack](#-tech-stack)Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   - Progress tracking and score calculation# Install dependencies---
 
 ### Frontend Technologies
 
-- Rohit - Developer
+   - Iterative learning support
 
 - **Framework**: React 19.2.0
 
-- **Routing**: React Router v6- Tamannah - Developer- [Prerequisites](#-prerequisites)
+- **Routing**: React Router v6npm install
 
 - **Build Tool**: Create React App 5.0.1
 
-- **Styling**: CSS3 with custom animations
+- **Styling**: CSS3 with custom animations5. **User Interface**
 
 - **State Management**: React Hooks (useState, useEffect, useCallback)
 
-## 📄 License- [Installation](#-installation)The page will reload when you make changes.\
+   - Responsive design for multiple device form factors# Getting Started with Create React App
 
 ### External APIs and Services
 
-
+   - Modern CSS animations and transitions
 
 - **AI Content Generation**
 
-  - Groq SDK v0.34.0MIT License - Educational Project  - [Windows](#windows)You may also see any lint errors in the console.
+  - Groq SDK v0.34.0   - Dark mode color scheme# Start development server
 
   - Google Generative AI v0.24.1
 
-  - HuggingFace Inference Providers API
+  - HuggingFace Inference Providers API   - Accessibility-compliant components
 
 
 
-- **Web APIs**---  - [macOS](#macos)
+- **Web APIs**npm start
 
   - Web Speech API (SpeechSynthesis, SpeechRecognition)
 
-  - Web Audio API (audio context management)
+  - Web Audio API (audio context management)## System Architecture
 
 
 
-### Development DependenciesBuilt with ❤️ by Team poopreetrohitamannah  - [Linux](#linux)### `npm test`
+### Development Dependencies
 
 
 
-- **Testing**: Jest, React Testing Library
+- **Testing**: Jest, React Testing Library### Frontend Architecture
 
-- **HTTP Client**: Axios 1.13.1- [Running the Application](#-running-the-application)
+- **HTTP Client**: Axios 1.13.1
 
-- **Performance Monitoring**: Web Vitals 2.1.4
+- **Performance Monitoring**: Web Vitals 2.1.4# Build for production[![React](https://img.shields.io/badge/React-19.2.0-blue.svg)](https://reactjs.org/)This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- [Project Structure](#-project-structure)Launches the test runner in the interactive watch mode.\
 
-## Prerequisites
 
-- [Usage Guide](#-usage-guide)See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites```
 
-### System Requirements
 
-- [Deployment](#-deployment)
 
-- **Node.js**: Version 16.x or higher
+### System Requirements┌─────────────────────────────────────────────────────┐npm run build
 
-- **npm**: Version 8.x or higher- [Contributing](#-contributing)### `npm run build`
 
-- **Memory**: Minimum 4GB RAM (8GB recommended)
 
-- **Storage**: 500MB available disk space- [Team](#-team)
+- **Node.js**: Version 16.x or higher│              React Application Layer                │
 
-- **Browser**: Modern browser with ES6+ support (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)
+- **npm**: Version 8.x or higher
 
-- [License](#-license)Builds the app for production to the `build` folder.\
+- **Memory**: Minimum 4GB RAM (8GB recommended)│  ┌──────────────┐  ┌──────────────┐  ┌───────────┐ │```[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-### Optional Requirements
+- **Storage**: 500MB available disk space
 
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Browser**: Modern browser with ES6+ support (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)│  │   Landing    │  │     Auth     │  │   Main    │ │
 
-- HuggingFace API token for enhanced AI capabilities
 
-- Groq API key for optimal performance---
 
-- Google Gemini API key for backup generation
+### Optional Requirements│  │     Page     │→ │  Component   │→ │    App    │ │
 
-The build is minified and the filenames include the hashes.\
 
-## Installation
 
-## ✨ FeaturesYour app is ready to be deployed!
+- HuggingFace API token for enhanced AI capabilities│  └──────────────┘  └──────────────┘  └───────────┘ │
 
-### Step 1: Clone Repository
+- Groq API key for optimal performance
+
+- Google Gemini API key for backup generation└─────────────────────────────────────────────────────┘## 🌐 Deployment[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)## Available Scripts
+
+
+
+## Installation                          ↓
+
+
+
+### Step 1: Clone Repository┌─────────────────────────────────────────────────────┐
+
+
+
+```bash│            Component Hierarchy                      │
+
+git clone https://github.com/CodeByPreeti/DSA.git
+
+cd DSA│  ┌────────────┐  ┌────────────┐  ┌──────────────┐  │This app is ready for Railway deployment:
+
+```
+
+│  │Preferences │  │   Story    │  │     Quiz     │  │
+
+### Step 2: Install Dependencies
+
+│  │  Manager   │→ │  Viewer    │→ │   System     │  │
+
+```bash
+
+npm install│  └────────────┘  └────────────┘  └──────────────┘  │
+
+```
+
+└─────────────────────────────────────────────────────┘1. Push to GitHub repository> An immersive, interactive platform for learning Data Structures and Algorithms through storytelling, visualizations, and voice-powered features.In the project directory, you can run:
+
+This will install all required packages listed in `package.json`.
+
+                          ↓
+
+### Step 3: Verify Installation
+
+┌─────────────────────────────────────────────────────┐2. Connect Railway to your GitHub repo
+
+```bash
+
+node --version  # Should display v16.x or higher│              Service Layer                          │
+
+npm --version   # Should display v8.x or higher
+
+```│  ┌────────────┐  ┌────────────┐  ┌──────────────┐  │3. Railway will auto-detect React and deploy
+
+
+
+## Configuration│  │   AI Gen   │  │   Speech   │  │    Audio     │  │
+
+
+
+### Environment Variables (Optional)│  │  Service   │  │  Service   │  │   Service    │  │4. Set environment variables if needed
+
+
+
+The application includes embedded API keys for demonstration purposes. For production deployment, configure the following environment variables:│  └────────────┘  └────────────┘  └──────────────┘  │
+
+
+
+```env└─────────────────────────────────────────────────────┘## 📋 Table of Contents### `npm start`
+
+# AI Service API Keys
+
+REACT_APP_GROQ_API_KEY=your_groq_api_key_here```
+
+REACT_APP_GEMINI_API_KEY=your_gemini_api_key_here
+
+REACT_APP_HF_TOKEN=your_huggingface_token_here## 👥 Team
+
+```
+
+### AI Service Integration
+
+### Railway Deployment Configuration
+
+
+
+For Railway deployment, no environment variables are required as API keys are embedded in the application code. The app will work out of the box.
+
+The application implements a cascade pattern for AI service availability:
+
+**Optional**: If you want to use your own API keys, add them in Railway's environment variables section:
+
+- `REACT_APP_GROQ_API_KEY`**MBM University - 7th Semester - Minor Project 2025**
+
+- `REACT_APP_GEMINI_API_KEY`
+
+- `REACT_APP_HF_TOKEN`1. **Primary**: Groq API (Llama 3.1 model) - Optimized for speed
+
+
+
+### Obtaining API Keys2. **Secondary**: Google Gemini API - Balanced performance- [Features](#-features)Runs the app in the development mode.\
+
+
+
+1. **Groq API**: Register at [console.groq.com](https://console.groq.com)3. **Tertiary**: HuggingFace Inference Providers - Fallback option
+
+2. **Google Gemini**: Obtain key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+
+3. **HuggingFace**: Generate token at [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)- Poonam - Developer
+
+
+
+## Usage## Technical Stack
+
+
+
+### Development Server- Preeti - Developer- [Tech Stack](#-tech-stack)Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+
+
+Start the development server with hot-reloading:### Frontend Technologies
+
+
+
+```bash- Rohit - Developer
+
+npm start
+
+```- **Framework**: React 19.2.0
+
+
+
+The application will be available at `http://localhost:3000`- **Routing**: React Router v6- Tamannah - Developer- [Prerequisites](#-prerequisites)
+
+
+
+### Production Build- **Build Tool**: Create React App 5.0.1
+
+
+
+Generate optimized production build:- **Styling**: CSS3 with custom animations
+
+
+
+```bash- **State Management**: React Hooks (useState, useEffect, useCallback)
+
+npm run build
+
+```## 📄 License- [Installation](#-installation)The page will reload when you make changes.\
+
+
+
+Output will be in the `build/` directory.### External APIs and Services
+
+
+
+### Running Tests
+
+
+
+Execute test suite:- **AI Content Generation**
+
+
+
+```bash  - Groq SDK v0.34.0MIT License - Educational Project  - [Windows](#windows)You may also see any lint errors in the console.
+
+npm test
+
+```  - Google Generative AI v0.24.1
+
+
+
+### Application Workflow  - HuggingFace Inference Providers API
+
+
+
+1. **Authentication**: Access the landing page and proceed to login/signup
+
+2. **Preferences**: Configure learning level (beginner/intermediate/advanced) and theme
+
+3. **Topic Selection**: Choose a DSA topic from the main dashboard- **Web APIs**---  - [macOS](#macos)
+
+4. **Learning**: Read AI-generated story with synchronized visualization
+
+5. **Narration**: Activate text-to-speech for audio learning  - Web Speech API (SpeechSynthesis, SpeechRecognition)
+
+6. **Assessment**: Complete quiz questions for knowledge validation
+
+7. **Progress**: Track scores and iterate learning as needed  - Web Audio API (audio context management)
+
+
+
+## Project Structure
+
+
+
+```### Development DependenciesBuilt with ❤️ by Team poopreetrohitamannah  - [Linux](#linux)### `npm test`
+
+dsa-storytelling-app/
+
+├── public/                          # Static assets
+
+│   ├── index.html                   # HTML entry point
+
+│   ├── manifest.json                # PWA manifest- **Testing**: Jest, React Testing Library
+
+│   ├── ok.png                       # Application logo
+
+│   ├── audio/                       # Audio files- **HTTP Client**: Axios 1.13.1- [Running the Application](#-running-the-application)
+
+│   └── team/                        # Team member images
+
+│       ├── poonam.jpg- **Performance Monitoring**: Web Vitals 2.1.4
+
+│       ├── preeti.png
+
+│       ├── rohit.jpg- [Project Structure](#-project-structure)Launches the test runner in the interactive watch mode.\
+
+│       └── tamannah.png
+
+├── src/                             # Source code## Prerequisites
+
+│   ├── components/                  # React components
+
+│   │   ├── auth/                    # Authentication components- [Usage Guide](#-usage-guide)See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+│   │   │   ├── Login.js
+
+│   │   │   └── Login.css### System Requirements
+
+│   │   ├── dashboard/               # User dashboard
+
+│   │   │   ├── Preferences.js- [Deployment](#-deployment)
+
+│   │   │   └── Preferences.css
+
+│   │   └── learning/                # Learning components- **Node.js**: Version 16.x or higher
+
+│   │       ├── AIChatBot.js         # AI chatbot interface
+
+│   │       ├── AIChatBot.css- **npm**: Version 8.x or higher- [Contributing](#-contributing)### `npm run build`
+
+│   │       ├── DSAVisualizer.js     # Visualization engine
+
+│   │       ├── DSAVisualizer.css- **Memory**: Minimum 4GB RAM (8GB recommended)
+
+│   │       ├── StoryViewer.js       # Main learning interface
+
+│   │       ├── StoryViewer.css- **Storage**: 500MB available disk space- [Team](#-team)
+
+│   │       ├── StoryProgress.js     # Progress tracker
+
+│   │       ├── StoryProgress.css- **Browser**: Modern browser with ES6+ support (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)
+
+│   │       ├── Quiz.js              # Assessment component
+
+│   │       └── Quiz.css- [License](#-license)Builds the app for production to the `build` folder.\
+
+│   ├── pages/                       # Page components
+
+│   │   ├── LandingPage.js           # Landing page### Optional Requirements
+
+│   │   ├── LandingPage.css
+
+│   │   └── LoginPage.js             # Login page wrapperIt correctly bundles React in production mode and optimizes the build for the best performance.
+
+│   ├── services/                    # Service layer
+
+│   │   ├── audioService.js          # Audio management- HuggingFace API token for enhanced AI capabilities
+
+│   │   ├── speechService.js         # Speech synthesis/recognition
+
+│   │   └── huggingFaceService.js    # AI story generation- Groq API key for optimal performance---
+
+│   ├── styles/                      # Global styles
+
+│   │   └── global.css- Google Gemini API key for backup generation
+
+│   ├── App.js                       # Root component
+
+│   ├── App.css                      # Root stylesThe build is minified and the filenames include the hashes.\
+
+│   ├── index.js                     # Application entry
+
+│   ├── index.css                    # Base styles## Installation
+
+│   ├── setupTests.js                # Test configuration
+
+│   └── reportWebVitals.js           # Performance monitoring## ✨ FeaturesYour app is ready to be deployed!
+
+├── .env.example                     # Environment template
+
+├── .gitignore                       # Git ignore rules### Step 1: Clone Repository
+
+├── package.json                     # Dependencies manifest
+
+├── package-lock.json                # Dependency lock file
+
+└── README.md                        # Documentation
+
+``````bash
+
+
+
+## Deploymentgit clone https://github.com/CodeByPreeti/DSA.git### 🎓 **Interactive Learning**See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+
+
+### Railwaycd DSA
+
+
+
+Railway deployment is straightforward as the application is pre-configured:```- **8 DSA Topics**: Arrays, Stacks, Queues, Linked Lists, Trees, Graphs, Sorting, Recursion
+
+
+
+1. **Connect Repository**: Link your GitHub repository (https://github.com/CodeByPreeti/DSA) to Railway
+
+2. **Auto-Detection**: Railway automatically detects React configuration
+
+3. **Automatic Deployment**: Push to main branch triggers deployment### Step 2: Install Dependencies- **Step-by-step visualizations** with play/pause controls### `npm run eject`
+
+4. **No Environment Variables Required**: App works with embedded API keys
+
+
+
+**Optional Configuration**:
+
+- Add custom domain in Railway settings```bash- **Code snippets** with syntax highlighting and explanations
+
+- Configure environment variables for custom API keys (optional)
+
+- Set build command: `npm run build` (auto-detected)npm install
+
+- Set start command: `npm start` (auto-detected)
+
+```- **Big-O complexity analysis** for each operation**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+### Vercel
 
 
 
 ```bash
 
-git clone https://github.com/CodeByPreeti/DSA.git### 🎓 **Interactive Learning**See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm install -g vercelThis will install all required packages listed in `package.json`.
 
-cd DSA
+vercel
 
-```- **8 DSA Topics**: Arrays, Stacks, Queues, Linked Lists, Trees, Graphs, Sorting, Recursion
+```
 
 
 
-### Step 2: Install Dependencies- **Step-by-step visualizations** with play/pause controls### `npm run eject`
+### Netlify### Step 3: Verify Installation### 🤖 **Gen AI Powered Stories**
 
 
 
-```bash- **Code snippets** with syntax highlighting and explanations
-
-npm install
-
-```- **Big-O complexity analysis** for each operation**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-
-
-This will install all required packages listed in `package.json`.
-
-
-
-### Step 3: Verify Installation### 🤖 **Gen AI Powered Stories**
-
-- **FREE Hugging Face Models**: GPT-2 & TinyLlama (no API key required!)
-
-```bash- **Unique Stories Every Time**: Click "✨ New" to regenerate with different narrative
-
-node --version  # Should display v16.x or higher- **Story-Related Code Comments**: Code snippets connect to story narrative
-
-npm --version   # Should display v8.x or higher- **Dynamic Generation**: Stories change based on your preferences and level
-
-```- **Voice/Text Input**: Say or type any topic to get instant AI explanations
-
-- **Multiple Model Fallback**: Automatically tries backup models if primary is busy
-
-## Configuration
-
-### 🎤 **Voice-Powered Interface**
-
-### Environment Variables (Optional)- **Speech-to-Text**: Record voice commands like "teach me arrays"
-
-- **Text-to-Speech**: Listen to stories narrated with adjustable voice settings
-
-Create a `.env` file in the root directory for API configuration:- **IIT Madras ASR API** integration with Web Speech API fallback
-
-- **Voice commands** trigger automatic AI story generation for requested topics
-
-```env
-
-# AI Service API Keys (Optional - fallbacks are available)
-
-REACT_APP_GROQ_API_KEY=your_groq_api_key_here
-
-REACT_APP_GEMINI_API_KEY=your_gemini_api_key_here### 🎵 **Immersive Audio Experience**## Learn More
-
-REACT_APP_HF_TOKEN=your_huggingface_token_here
-
-```- **6 Dynamic Themes**: Nature 🌳, Battle ⚔️, Sci-Fi 🚀, Mystery 🔍, Adventure 🏔️, Fantasy 🧙
-
-
-
-**Note**: API keys are embedded in the application for demonstration purposes. For production deployment, use environment variables.- **Generative Background Music** using Web Audio APIYou can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-
-
-### Obtaining API Keys- **Sound Effects** for interactions (clicks, correct/wrong answers)
-
-
-
-1. **Groq API**: Register at [console.groq.com](https://console.groq.com)- **Volume Controls** with real-time adjustmentTo learn React, check out the [React documentation](https://reactjs.org/).
-
-2. **Google Gemini**: Obtain key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-
-3. **HuggingFace**: Generate token at [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
-
-
-
-## Usage### 📝 **Assessment System**### Code Splitting
-
-
-
-### Development Server- **16 MCQ Questions** (2 per topic)
-
-
-
-Start the development server with hot-reloading:- **Instant Feedback** with detailed explanationsThis section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-
-
-```bash- **Score Tracking** with percentage calculation
-
-npm start
-
-```- **Retry & Continue** options for flexible learning### Analyzing the Bundle Size
-
-
-
-The application will be available at `http://localhost:3000`
-
-
-
-### Production Build### 🎨 **Beautiful UI/UX**This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-
-
-Generate optimized production build:- **Stunning Animations**: Shimmer effects, floating particles, gradient borders
-
-
-
-```bash- **Responsive Design**: Mobile, tablet, and desktop optimized### Making a Progressive Web App
+```bash- **FREE Hugging Face Models**: GPT-2 & TinyLlama (no API key required!)
 
 npm run build
 
-```- **Custom Loading States**: 3-ring spinner, skeleton screens
+# Deploy build/ folder via Netlify web interface```bash- **Unique Stories Every Time**: Click "✨ New" to regenerate with different narrative
+
+```
+
+node --version  # Should display v16.x or higher- **Story-Related Code Comments**: Code snippets connect to story narrative
+
+### GitHub Pages
+
+npm --version   # Should display v8.x or higher- **Dynamic Generation**: Stories change based on your preferences and level
+
+Add to `package.json`:
+
+```- **Voice/Text Input**: Say or type any topic to get instant AI explanations
+
+```json
+
+{- **Multiple Model Fallback**: Automatically tries backup models if primary is busy
+
+  "homepage": "https://codebypreeti.github.io/DSA",
+
+  "scripts": {## Configuration
+
+    "predeploy": "npm run build",
+
+    "deploy": "gh-pages -d build"### 🎤 **Voice-Powered Interface**
+
+  }
+
+}### Environment Variables (Optional)- **Speech-to-Text**: Record voice commands like "teach me arrays"
+
+```
+
+- **Text-to-Speech**: Listen to stories narrated with adjustable voice settings
+
+Deploy:
+
+Create a `.env` file in the root directory for API configuration:- **IIT Madras ASR API** integration with Web Speech API fallback
+
+```bash
+
+npm install --save-dev gh-pages- **Voice commands** trigger automatic AI story generation for requested topics
+
+npm run deploy
+
+``````env
+
+
+
+## Academic Context# AI Service API Keys (Optional - fallbacks are available)
+
+
+
+### Educational MethodologyREACT_APP_GROQ_API_KEY=your_groq_api_key_here
+
+
+
+This platform implements constructivist learning theory by providing:REACT_APP_GEMINI_API_KEY=your_gemini_api_key_here### 🎵 **Immersive Audio Experience**## Learn More
+
+
+
+- **Active Learning**: Interactive visualizations requiring user engagementREACT_APP_HF_TOKEN=your_huggingface_token_here
+
+- **Contextual Learning**: Abstract concepts embedded in narrative contexts
+
+- **Multimodal Input**: Visual, auditory, and textual learning channels```- **6 Dynamic Themes**: Nature 🌳, Battle ⚔️, Sci-Fi 🚀, Mystery 🔍, Adventure 🏔️, Fantasy 🧙
+
+- **Immediate Feedback**: Real-time assessment with explanations
+
+
+
+### Research Applications
+
+**Note**: API keys are embedded in the application for demonstration purposes. For production deployment, use environment variables.- **Generative Background Music** using Web Audio APIYou can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+Potential research areas:
+
+
+
+- Effectiveness of narrative-based CS education
+
+- Impact of multimodal learning on algorithm comprehension### Obtaining API Keys- **Sound Effects** for interactions (clicks, correct/wrong answers)
+
+- AI-generated content quality assessment
+
+- User engagement metrics in interactive learning platforms
+
+
+
+### Course Integration1. **Groq API**: Register at [console.groq.com](https://console.groq.com)- **Volume Controls** with real-time adjustmentTo learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+Suitable for:2. **Google Gemini**: Obtain key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+
+
+
+- Undergraduate Data Structures courses3. **HuggingFace**: Generate token at [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
+
+- Algorithm Design and Analysis modules
+
+- Computer Science fundamentals
+
+- Self-paced learning programs
+
+## Usage### 📝 **Assessment System**### Code Splitting
+
+## Contributors
+
+
+
+### Project Team
+
+### Development Server- **16 MCQ Questions** (2 per topic)
+
+**MBM University - Department of Computer Science**  
+
+**7th Semester - Minor Project 2025**
+
+
+
+| Name | Role | Contribution |Start the development server with hot-reloading:- **Instant Feedback** with detailed explanationsThis section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+|------|------|--------------|
+
+| Poonam | Developer | Content creation, UI components |
+
+| Preeti | Developer | Frontend architecture, styling |
+
+| Rohit | Developer | Backend integration, deployment |```bash- **Score Tracking** with percentage calculation
+
+| Tamannah | Developer | Testing, documentation |
+
+npm start
+
+### Academic Supervision
+
+```- **Retry & Continue** options for flexible learning### Analyzing the Bundle Size
+
+- **Institution**: Maharaja Bir Bikram University
+
+- **Program**: Bachelor of Computer Applications
+
+- **Semester**: 7th Semester
+
+- **Academic Year**: 2024-2025The application will be available at `http://localhost:3000`
+
+- **Project Type**: Minor Project
+
+
+
+## License
+
+### Production Build### 🎨 **Beautiful UI/UX**This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+This project is licensed under the MIT License - suitable for educational and research purposes.
+
+
+
+## Contact
+
+Generate optimized production build:- **Stunning Animations**: Shimmer effects, floating particles, gradient borders
+
+**Project Repository**: [https://github.com/CodeByPreeti/DSA](https://github.com/CodeByPreeti/DSA)
+
+
+
+**Issues**: [https://github.com/CodeByPreeti/DSA/issues](https://github.com/CodeByPreeti/DSA/issues)
+
+```bash- **Responsive Design**: Mobile, tablet, and desktop optimized### Making a Progressive Web App
+
+---
+
+npm run build
+
+**Last Updated**: November 2025  
+
+**MBM University - 7th Semester - Minor Project 2025**```- **Custom Loading States**: 3-ring spinner, skeleton screens
+
 
 
 

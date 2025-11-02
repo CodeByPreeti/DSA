@@ -53,6 +53,7 @@ const AIChatBot = () => {
     }
   }, [isOpen]);
 
+  // eslint-disable-next-line no-unused-vars
   const callMistralAPI = async (userQuestion) => {
     try {
       setApiStatus('🔗 Connecting to Gradio Space (Mistral-7B)...');

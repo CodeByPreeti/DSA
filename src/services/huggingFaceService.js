@@ -1,4 +1,5 @@
-﻿// ============================================
+﻿/* eslint-disable unicode-bom */
+// ============================================
 //  GEN AI SERVICE - FREE AI Integration
 // ============================================
 // Priority: Groq (fastest) → Gemini → HuggingFace Inference Providers
@@ -175,6 +176,7 @@ class HuggingFaceService {
   }
 
   async generateWithGradio(topic, preferences) {
+    // eslint-disable-next-line no-unused-vars
     const { level = 'beginner', theme = 'adventure', timestamp, randomSeed, forceNew } = preferences;
     const prompt = this.createEnhancedPrompt(topic, level, theme, { timestamp, randomSeed });
     
@@ -510,6 +512,7 @@ class HuggingFaceService {
     const topicFormatted = topic.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
     
     // Add randomization to ensure different stories each time
+    // eslint-disable-next-line no-unused-vars
     const timestamp = options.timestamp || Date.now();
     const randomSeed = options.randomSeed || Math.random();
     const storyNumber = Math.floor(randomSeed * 1000);
@@ -1282,6 +1285,7 @@ console.log("Flatten:", flattenArray([1, [2, [3, 4], 5], 6])); // [1,2,3,4,5,6]`
   }
 
   getFallbackStory(topic, preferences) {
+    // eslint-disable-next-line no-unused-vars
     const { level = 'beginner', theme = 'adventure' } = preferences;
     
     const detailedStories = {

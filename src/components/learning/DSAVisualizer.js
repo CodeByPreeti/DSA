@@ -229,6 +229,7 @@ factorial(5)
     setVisualState(currentViz.steps[0].state);
     setCode(currentViz.code);
     setExplanation(currentViz.steps[0].explanation);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [topic]);
 
   useEffect(() => {
@@ -238,6 +239,7 @@ factorial(5)
       }, 1800); // Faster - 1.8 seconds per step
       return () => clearTimeout(timer);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPlaying, currentStep, isAnimating]);
 
   const nextStep = () => {

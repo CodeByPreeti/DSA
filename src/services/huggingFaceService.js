@@ -1,8 +1,9 @@
 ﻿// ============================================
 //  GEN AI SERVICE - FREE AI Integration
 // ============================================
-// Priority: Groq (fastest) → Gemini → HuggingFace Serverless
+// Priority: Groq (fastest) → Gemini → HuggingFace Inference Providers
 // All options are 100% FREE with generous limits
+// Updated: Nov 2025 - Migrated to new HF Inference Providers API
 // ============================================
 
 // Import AI SDKs
@@ -48,14 +49,17 @@ class HuggingFaceService {
     }
     
     // ========================================
-    // 🔧 HUGGINGFACE Serverless Configuration (Backup)
+    // 🔧 HUGGINGFACE Inference Providers (Backup)
     // ========================================
     // Get FREE token from: https://huggingface.co/settings/tokens
     // Add to .env: REACT_APP_HF_TOKEN=your_token_here
+    // NOTE: Migrated to new Inference Providers API (Nov 2025)
+    // Old endpoint (api-inference.huggingface.co) deprecated
+    // New endpoint: router.huggingface.co/hf-inference/
     this.hfToken = process.env.REACT_APP_HF_TOKEN || '';
     
     if (this.hfToken) {
-      console.log('✅ HuggingFace token loaded');
+      console.log('✅ HuggingFace token loaded (using new Inference Providers API)');
     }
     
     // Gradio Space (legacy - often unstable)
@@ -64,10 +68,11 @@ class HuggingFaceService {
     
     this.maxRetries = 3;
     this.timeout = 30000;
+    // Updated to new Inference Providers API (November 2025)
     this.fallbackModels = [
-      'https://api-inference.huggingface.co/models/google/flan-t5-large',
-      'https://api-inference.huggingface.co/models/gpt2',
-      'https://api-inference.huggingface.co/models/TinyLlama/TinyLlama-1.1B-Chat-v1.0'
+      'https://router.huggingface.co/hf-inference/models/google/flan-t5-large',
+      'https://router.huggingface.co/hf-inference/models/gpt2',
+      'https://router.huggingface.co/hf-inference/models/TinyLlama/TinyLlama-1.1B-Chat-v1.0'
     ];
   }
 
@@ -76,7 +81,7 @@ class HuggingFaceService {
     console.log('📋 Available AI Services:');
     console.log('   1. Groq (Llama 3.1) -', this.groqClient ? '✅ Ready' : '❌ Not configured');
     console.log('   2. Google Gemini -', this.genAI ? '✅ Ready' : '❌ Not configured');
-    console.log('   3. HuggingFace Serverless -', this.hfToken ? '✅ Ready' : '⚠️ Limited rate');
+    console.log('   3. HuggingFace Inference Providers -', this.hfToken ? '✅ Ready' : '⚠️ Limited rate');
     
     // ============================================
     // PRIORITY 1: Try Groq (Fastest & Most Reliable)
@@ -349,13 +354,13 @@ class HuggingFaceService {
   // ============================================
   async generateWithHuggingFaceServerless(topic, preferences = {}) {
     try {
-      console.log('🔧 Calling HuggingFace Serverless API...');
+      console.log('🔧 Calling HuggingFace Inference Providers API (New endpoint)...');
       
       const { level = 'beginner', theme = 'fantasy' } = preferences;
       
-      // Use a free serverless model
+      // Use a free serverless model with new Inference Providers API
       const model = 'mistralai/Mixtral-8x7B-Instruct-v0.1'; // Fast and good quality
-      const apiUrl = `https://api-inference.huggingface.co/models/${model}`;
+      const apiUrl = `https://router.huggingface.co/hf-inference/models/${model}`;
       
       // Create prompt
       const prompt = this.createEnhancedPrompt(topic, level, theme, {
@@ -363,7 +368,7 @@ class HuggingFaceService {
         randomSeed: Math.random()
       });
       
-      console.log('📤 Sending request to HuggingFace Serverless...');
+      console.log('📤 Sending request to HuggingFace Inference Providers API...');
       
       const response = await fetch(apiUrl, {
         method: 'POST',

@@ -103,8 +103,30 @@
 .story-content-panel,
 .visualizer-panel {
   min-height: 600px;
-  max-height: 800px;
+  max-height: 900px;
   overflow-y: auto;
+}
+
+.story-content-panel::-webkit-scrollbar,
+.visualizer-panel::-webkit-scrollbar {
+  width: 10px;
+}
+
+.story-content-panel::-webkit-scrollbar-track,
+.visualizer-panel::-webkit-scrollbar-track {
+  background: #F3F4F6;
+  border-radius: 5px;
+}
+
+.story-content-panel::-webkit-scrollbar-thumb,
+.visualizer-panel::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 5px;
+}
+
+.story-content-panel::-webkit-scrollbar-thumb:hover,
+.visualizer-panel::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
 }
 
 /* Enhanced Header Styles */
@@ -624,8 +646,26 @@
   font-size: 1.15rem;
   color: #374151;
   background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
-  max-height: 650px;
+  max-height: 750px;
   overflow-y: auto;
+}
+
+.story-text-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.story-text-content::-webkit-scrollbar-track {
+  background: #F3F4F6;
+  border-radius: 4px;
+}
+
+.story-text-content::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+
+.story-text-content::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
 }
 
 .story-paragraph {

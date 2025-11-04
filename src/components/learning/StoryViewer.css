@@ -97,11 +97,14 @@
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   margin-bottom: 40px;
+  align-items: start;
 }
 
 .story-content-panel,
 .visualizer-panel {
   min-height: 600px;
+  max-height: 800px;
+  overflow-y: auto;
 }
 
 /* Enhanced Header Styles */
@@ -621,6 +624,8 @@
   font-size: 1.15rem;
   color: #374151;
   background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+  max-height: 650px;
+  overflow-y: auto;
 }
 
 .story-paragraph {

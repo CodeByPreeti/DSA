@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './DSAVisualizer.css';
 
-const DSAVisualizer = ({ topic, isPlaying, onStepComplete }) => {
+const DSAVisualizer = ({ topic, isPlaying, onStepComplete, generatedCode }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [visualState, setVisualState] = useState([]);
   const [code, setCode] = useState('');
@@ -227,10 +227,14 @@ factorial(5)
   useEffect(() => {
     setCurrentStep(0);
     setVisualState(currentViz.steps[0].state);
-    setCode(currentViz.code);
+    
+    // Use dynamically generated code if available, otherwise use default
+    const codeToDisplay = generatedCode || currentViz.code;
+    setCode(codeToDisplay);
+    
     setExplanation(currentViz.steps[0].explanation);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [topic]);
+  }, [topic, generatedCode]);
 
   useEffect(() => {
     if (isPlaying && !isAnimating) {

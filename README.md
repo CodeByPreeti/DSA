@@ -227,7 +227,7 @@ dsa-storytelling-app/
 │       ├── poonam.jpg
 │       ├── preeti.png
 │       ├── rohit.jpg
-│       └── tamannah.png
+│       └── tamanna.jpg
 ├── src/
 │   ├── components/
 │   │   ├── auth/

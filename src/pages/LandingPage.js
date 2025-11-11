@@ -31,9 +31,9 @@ const LandingPage = () => {
       image: '/team/rohit.jpg'
     },
     {
-      name: 'Tamannah',
+      name: 'Tamanna',
       role: 'Developer',
-      image: '/team/tamannah.png'
+      image: '/team/tamanna.jpg'
     }
   ];
 
